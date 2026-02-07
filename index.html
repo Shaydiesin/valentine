@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Hi My Celia.</h1>
+    <p>I made this for you, because you mean everything to me.</p>
+  </section>
+  
+ <section class="memory">
+    
+  <h2>Us</h2>
+
+  <div class="memory-photo">
+    <img src="photos/us_to.jpg" alt="Us together" />
+  </div>
+
+  <p>
+    From the first moment we met, you’ve made my life warmer,
+    louder, and better in every way.
+  </p>
+
+  
+</section>
+
+
+  <section class="week">
+
+    <!-- ROSE DAY -->
+    <section class="day" data-day="1">
+        <h2>🌹 Rose Day</h2>
+            <div class="petals">🌸 🌸 🌸</div>
+
+        <p>This is for you, because you make my world bloom.</p>
+
+            <div class="rose-svg">
+                <svg width="180" height="220" viewBox="0 0 200 250">
+
+                    <!-- Stem -->
+                    <line x1="100" y1="120" x2="100" y2="220"
+                        stroke="#2e7d32" stroke-width="6" />
+
+                    <!-- Leaves -->
+                    <ellipse cx="75" cy="165" rx="25" ry="12" fill="#388e3c" />
+                    <ellipse cx="125" cy="185" rx="25" ry="12" fill="#388e3c" />
+
+                    <!-- Petals -->
+                    <g class="petal petal-1">
+                    <ellipse cx="100" cy="95" rx="18" ry="35" fill="#e91e63"/>
+                    </g>
+
+                    <g class="petal petal-2">
+                    <ellipse cx="100" cy="95" rx="18" ry="35" fill="#d81b60"/>
+                    </g>
+
+                    <g class="petal petal-3">
+                    <ellipse cx="100" cy="95" rx="18" ry="35" fill="#c2185b"/>
+                    </g>
+
+                    <g class="petal petal-4">
+                    <ellipse cx="100" cy="95" rx="18" ry="35" fill="#ad1457"/>
+                    </g>
+
+                </svg>
+
+            <p class="hint">hover or tap to bloom 🌹</p>
+            </div>
+
+    </section>
+
+
+    <section class="day" data-day="2">
+        <h2>⛏️ Propose Day</h2>
+        <p>Mine carefully…</p>
+
+        <div class="mc-game">
+
+            <!-- Ore -->
+            <img src="photos/ore_0.png" id="ore" class="ore" />
+
+            <!-- Diamond -->
+            <img
+            src="photos/diamond.png"
+            id="diamond"
+            class="diamond hidden"
+            draggable="true"
+            />
+
+            <!-- Minecraft Ring -->
+            <div id="ring" class="ring-target locked">
+            <div class="mc-ring">
+                <div class="mc-hole"></div>
+            </div>
+
+            <img
+                src="photos/diamond.png"
+                class="ring-diamond hidden"
+                id="ringDiamond"
+            />
+            </div>
+
+            <!-- Final text -->
+            <p id="proposal" class="final-text hidden">
+            Will you be mine-craft? ❤️
+            </p>
+
+        </div>
+
+        <p class="hint" id="hint">Mine the ore</p>
+    </section>
+
+
+
+
+
+
+    <section class="day" data-day="3">
+        <h2>🍫 Chocolate Day</h2>
+        <p>Take a bite…</p>
+
+        <div class="chocolate-wrapper">
+            <!-- Hidden photo -->
+            <img src="photos/us_1.jpg" alt="Us" class="hidden-photo" />
+
+            <!-- Chocolate grid -->
+            <div class="chocolate-grid" id="chocolateGrid">
+            <!-- JS will generate tiles -->
+            </div>
+        </div>
+
+        <p class="instruction" id="chocoInstruction">
+            Click all the chocolates 🍫
+        </p>
+
+    </section>
+
+
+    <section class="day" data-day="4">
+        <h2>🧸 Teddy Day</h2>
+        <p>Build your comfort teddy</p>
+
+        <div class="teddy-wrap">
+            <div class="teddy" id="teddy">
+                <div class="ear left"></div>
+                <div class="ear right"></div>
+
+                <div class="face">
+                    <div class="patch left"></div>
+                    <div class="patch right"></div>
+
+                    <div class="eye left"></div>
+                    <div class="eye right"></div>
+
+                    <div class="nose"></div>
+                    <div class="mouth"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="teddy-actions">
+            <button data-step="1">Add warmth</button>
+            <button data-step="2">Add comfort</button>
+            <button data-step="3">Add love</button>
+        </div>
+
+        <p id="teddy-text" class="final-text hidden">
+            Piece by piece, you became my comfort 🤍
+        </p>
+    </section>
+
+
+<section class="day" data-day="5">
+  <h2>❤️ Promise Day</h2>
+  <p>Share your heart 💌</p>
+
+  <div class="heart-container">
+    <img src="photos/me.jpg" alt="Left" class="side-img left-img">
+    
+    <div class="hearts-wrap">
+      <div class="heart red-heart" id="red-heart">❤️</div>
+      <div class="heart blue-heart" id="blue-heart">💙</div>
+    </div>
+
+    <img src="photos/her.jpg" alt="Right" class="side-img right-img">
+  </div>
+
+  <div id="lines" class="lines">
+    <p>Take a piece of my heart</p>
+    <p id="line2" class="hidden">And make it all your own</p>
+    <p id="line3" class="hidden">So when we are apart</p>
+    <p id="line4" class="hidden">We will never be alone</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="day" data-day="6">
+  <h2>🤗 Hug Day</h2>
+  <p>Pull the hand to hug!</p>
+
+  <div class="hug-container">
+    <!-- Guy character -->
+    <div class="character guy" id="guy">
+      <!-- <div class="face">🙂</div> -->
+      <img class="face-photo" src="photos/him_1.jpg" alt="Guy">
+    </div>
+
+    <!-- Female character -->
+    <div class="character female" id="female">
+      <!-- <div class="face">😊</div> -->
+      <img class="face-photo" src="photos/her_1.jpg" alt="Guy">
+    </div>
+
+    <!-- Hand is now direct child of container -->
+    <div class="hand" id="hand">✋</div>
+
+    <!-- Rope from hand original position to current hand -->
+    <div class="rope" id="rope"></div>
+  </div>
+
+  <p id="hug-msg" class="final-text hidden">
+    🤗 You are hugged! Distance doesn’t matter when hearts are close.
+  </p>
+</section>
+
+
+
+
+<section class="day" data-day="7">
+  <h2>💋 Kiss Day</h2>
+  <p>Click the button to kiss</p>
+
+  <div class="kiss-container" id="kiss-scene">
+    <!-- Guy -->
+    <div id="l-ball" class="ball">
+      <div class="dialogue" id="guy-bubble">
+        <span>I</span><span>Love</span><span>You</span>
+      </div>
+
+
+      <div class="eyesee">
+        <span class="eyeser"></span>
+        <span class="eyeser"></span>
+      </div>
+
+      
+      <div class="kiss-g">
+        <div class="kiss"></div>
+        <div class="kiss"></div>
+      </div>
+    </div>
+
+    <!-- Girl -->
+    <div id="r-ball" class="ball">
+      <div class="dialogue" id="girl-bubble">
+        <span>I</span><span>Love</span><span>You</span>
+      </div>
+
+
+      <div class="eyesee">
+        <span class="eyeser"></span>
+        <span class="eyeser"></span>
+      </div>
+
+
+
+      <div class="kiss-m">
+        <div class="kiss"></div>
+        <div class="kiss"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-wrap">
+    <button id="kiss-btn">Kiss 💋</button>
+  </div>
+
+    <p id="final-line" class="final-line">
+    The way we wished we learned language
+    </p>
+
+</section>
+
+
+
+
+
+
+    <section class="day valentine-day" data-day="8">
+  <h2>💌 Valentine’s Day</h2>
+  <p class="hint">Break the seal</p>
+
+  <div class="envelope-scene" id="envelopeScene">
+
+    <!-- HEART SEAL -->
+    <div class="seal" id="seal"></div>
+
+    <!-- ENVELOPE -->
+    <div class="envelope" id="envelope">
+      <div class="flap"></div>
+      <div class="body"></div>
+
+      <!-- LETTER -->
+      <div class="letter">
+        <div class="letter-content">
+          <p>Mon amour,</p>
+
+          <p>
+            J’ai tellement de chance de t’avoir dans ma vie.
+            Tu m’as montré le véritable sens de l’amour.
+            Comme un nuage, tu m’emportes loin, et comme le soleil, tu illumines mes journées.
+            J’aimerais pouvoir célébrer la Saint-Valentin avec toi.
+            Merci infiniment de m’aimer (et d’aimer mes petites obsessions).
+          </p>
+
+          <p>
+            Chaque mot ici est le tien.
+          </p>
+
+          <p class="sign">— À toi pour toujours,  <br>
+            Yash ❤️
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</section>
+
+  <footer>
+    <p>Made with love by Yash</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

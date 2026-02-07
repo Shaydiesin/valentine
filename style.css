@@ -1,0 +1,1224 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #fff5ea;
+  color: #2e2e2e;
+  text-align: center;
+}
+
+section {
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+
+.memory {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.memory h2 {
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 16px;
+}
+
+.memory p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.memory-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.memory-photo img {
+  width: 260px;        /* adjust as you like */
+  height: auto;
+  border-radius: 12px; /* soft romantic corners */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.reveal button {
+  background: #8b1e3f;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.reveal button:hover {
+  transform: scale(1.05);
+}
+
+#letter {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+.signature {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+footer {
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.week {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.day {
+  display: none;
+  margin-bottom: 60px;
+}
+
+.day.active {
+  display: block;
+}
+
+.day.past {
+  display: block;
+  opacity: 0.5;
+}
+
+.day.locked {
+  display: block;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+.day h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+
+
+
+
+
+
+
+
+/* ROSE DAY */
+
+
+.rose-container {
+  margin-top: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.rose {
+  width: 120px;
+  transition: transform 0.6s ease, filter 0.6s ease;
+  filter: grayscale(100%);
+}
+
+.rose-container:hover .rose {
+  transform: scale(1.15) rotate(-2deg);
+  filter: grayscale(0%);
+}
+
+.hint {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.petals {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0.5);
+  transition: transform 1s ease;
+}
+
+.rose-svg:hover .petals {
+  transform: scale(1);
+}
+
+.rose-svg.bloom .petals {
+  transform: scale(1);
+}
+
+
+
+.rose-svg {
+  margin-top: 40px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.petals {
+  transform-origin: center;
+  transform: scale(0.6);
+  transition: transform 1s ease;
+}
+
+.rose-svg:hover .petals {
+  transform: scale(1);
+}
+
+.hint {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+
+
+.rose-svg:hover svg {
+  animation: sway 2s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+
+.rose-svg {
+  margin-top: 40px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* base petal setup */
+.petal {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  transition: transform 1s ease;
+}
+
+/* closed bud */
+.petal-1 { transform: rotate(0deg); }
+.petal-2 { transform: rotate(0deg); }
+.petal-3 { transform: rotate(0deg); }
+.petal-4 { transform: rotate(0deg); }
+
+/* BLOOM */
+.rose-svg:hover .petal-1,
+.rose-svg.bloom .petal-1 {
+  transform: rotate(-35deg);
+}
+
+.rose-svg:hover .petal-2,
+.rose-svg.bloom .petal-2 {
+  transform: rotate(35deg);
+}
+
+.rose-svg:hover .petal-3,
+.rose-svg.bloom .petal-3 {
+  transform: rotate(-70deg);
+}
+
+.rose-svg:hover .petal-4,
+.rose-svg.bloom .petal-4 {
+  transform: rotate(70deg);
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+
+
+
+/* PROPOSE DAY */
+
+.mc-game {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Ore */
+.ore {
+  width: 96px;
+  image-rendering: pixelated;
+  cursor: pointer;
+}
+
+/* Diamond */
+.diamond {
+  width: 48px;
+  image-rendering: pixelated;
+  cursor: grab;
+}
+
+/* Ring target */
+.ring-target {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.ring-target.ready {
+  opacity: 1;
+}
+
+/* Minecraft-style octagon ring */
+.mc-ring {
+  width: 64px;
+  height: 64px;
+  background: #f5c542;
+  image-rendering: pixelated;
+  position: relative;
+
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  );
+
+  box-shadow:
+    inset -4px -4px 0 #c99b1f,
+    inset 4px 4px 0 #ffe58a;
+}
+
+/* Octagon hole */
+.mc-hole {
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  );
+}
+
+
+/* Diamond mounted on ring */
+.ring-diamond {
+  width: 48px;              /* 👈 BIGGER diamond */
+  image-rendering: pixelated;
+  position: absolute;
+  top: -8px;               /* 👈 lift it slightly */
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.ring-target.filled .ring-diamond {
+  transform: translateX(-50%) scale(1);
+}
+
+/* Shine */
+/* .ring-target.open .mc-ring {
+  animation: shine 1s ease forwards;
+}
+
+
+@keyframes shine {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.1); }
+  100% { filter: brightness(1); }
+} */
+
+/* Diamond enchant-style glow */
+.ring-target.open .ring-diamond {
+  animation: diamond-glow 1.6s ease-in-out infinite;
+}
+
+@keyframes diamond-glow {
+  0% {
+    filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.4));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 10px rgba(0, 255, 255, 0.9))
+      drop-shadow(0 0 16px rgba(180, 255, 255, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.4));
+  }
+}
+
+
+/* Helpers */
+.hidden {
+  display: none;
+}
+
+.final-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+/* CHOCOLATE DAY */
+/*  */
+
+
+.chocolate-wrapper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Photo underneath */
+.hidden-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Chocolate grid */
+.chocolate-grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  z-index: 2;
+}
+
+.choco-tile {
+  position: relative; /* 👈 REQUIRED */
+  background: linear-gradient(135deg, #6b3e26, #8b5a3c);
+  border: 1px solid #4a2b1a;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+
+/* Chocolate stamp */
+.choco-letter {
+  font-family: 'Bungee', cursive;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  color: rgba(255, 255, 255, 0.18);
+
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+
+  /* Diagonal stamp */
+  transform: rotate(-30deg);
+
+  /* Pressed chocolate look */
+  text-shadow:
+    1px 1px 0 rgba(0,0,0,0.35),
+    -1px -1px 0 rgba(255,255,255,0.15);
+}
+
+
+.choco-tile:hover {
+  transform: scale(0.95);
+}
+
+/* Eaten */
+.choco-tile.eaten {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+
+/* =========================
+   TEDDY / PANDA DAY (PURE CSS)
+   ========================= */
+
+.teddy-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.teddy {
+  position: relative;
+  width: 140px;
+  height: 140px;
+
+  transform: scale(0.8);
+  filter: grayscale(1) brightness(0.6);
+
+  transition: all 0.4s ease;
+}
+
+/* ---------- EARS ---------- */
+.ear {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #111;
+  border-radius: 50%;
+  top: -10px;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ear.left { left: -15px; }
+.ear.right { right: -15px; }
+
+/* ---------- FACE ---------- */
+.face {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+
+/* ---------- PANDA EYE PATCHES ---------- */
+.patch {
+  position: absolute;
+  width: 28px;
+  height: 22px;
+  background: #000000;
+  border-radius: 50%;
+  top: 38px;
+  opacity: 0;
+}
+
+.patch.left { left: 32px; }
+.patch.right { right: 32px; }
+
+
+/* ---------- EYES ---------- */
+.eye {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  top: 45px;
+
+  opacity: 0;
+}
+
+/* Panda eye patches */
+.eye::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 22px;
+  background: #111;
+  border-radius: 50%;
+  top: -8px;
+  left: -9px;
+  z-index: -1;
+}
+
+.eye.left { left: 40px; }
+.eye.right { right: 40px; }
+
+/* ---------- NOSE ---------- */
+.nose {
+  position: absolute;
+  width: 18px;
+  height: 14px;
+  background: #333;
+  border-radius: 0 0 50% 50%;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+/* ---------- MOUTH ---------- */
+.mouth {
+  position: absolute;
+  width: 24px;
+  height: 12px;
+  border-bottom: 3px solid #333;
+  border-radius: 0 0 20px 20px;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* ---------- BUILD STEPS ---------- */
+.teddy.warm {
+  filter: grayscale(0.5) brightness(0.85);
+  transform: scale(0.95);
+}
+
+.teddy.warm .ear {
+  opacity: 1;
+}
+
+.teddy.comfort {
+  filter: grayscale(0.2) brightness(1);
+}
+
+.teddy.comfort .eye,
+.teddy.comfort .nose,
+.teddy.comfort .mouth {
+  opacity: 1;
+}
+
+.teddy.love {
+  filter: none;
+  transform: scale(1);
+  animation: hug 0.8s ease-in-out infinite alternate;
+}
+
+.teddy.love .mouth {
+  width: 30px;
+  border-bottom-width: 4px;
+}
+
+/* ---------- HUG ANIMATION ---------- */
+@keyframes hug {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* ---------- CONTROLS ---------- */
+.teddy-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.teddy-actions button {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #f4c2c2;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.teddy-actions button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* ---------- UTIL ---------- */
+.hidden {
+  display: none;
+}
+
+.teddy.comfort .patch {
+  opacity: 1;
+}
+
+
+
+
+/* =========================
+   PROMISE DAY
+   ========================= */
+
+.heart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 40px 0;
+  position: relative;
+}
+
+.side-img {
+  width: 150px;      /* adjust size as needed */
+  height: 150px;     /* keep width = height for square */
+  object-fit: cover; /* ensures image fills the square without stretching */
+  border-radius: 0;  /* remove rounding to make it square */
+}
+
+
+.hearts-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  position: relative;
+}
+
+/* Main hearts */
+.heart {
+  font-size: 100px;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.heart:hover {
+  transform: scale(1.1);
+}
+
+/* Small hearts inside target */
+.small-heart {
+  position: absolute;
+  font-size: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0.9;
+  transition: transform 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Mouse-following heart */
+.follow-heart {
+  position: fixed;
+  font-size: 40px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.lines {
+  text-align: center;
+  font-size: 18px;
+  color: #ff1493;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.hidden { display: none; }
+
+/* Optional colors for hearts */
+.red-heart { color: red; }
+.blue-heart { color: blue; }
+
+
+
+/* HUG DAY */
+
+.hug-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 250px;
+  margin: 40px;
+}
+
+/* Characters */
+.character {
+  width: 100px;
+  height: 150px;
+  background: #ffe0b2;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  position: relative;
+}
+
+.guy { background: #90caf9; }
+.female { background: #f48fb1; }
+
+.face { pointer-events: none; }
+
+/* Hand now absolute inside container */
+.hand {
+  position: absolute;
+  font-size: 40px;
+  cursor: grab;
+  user-select: none;
+}
+
+.hand:active { cursor: grabbing; }
+
+/* Rope */
+.rope {
+  position: absolute;
+  height: 4px;
+  background: #ff69b4;
+  transform-origin: left center;
+  z-index: 0;
+}
+
+/* Message */
+.final-text {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+  color: #ff1493;
+}
+
+.hidden { display: none; }
+
+
+.face-photo {
+  width: 80%;        /* adjust to fit inside character container */
+  height: 80%;
+  border-radius: 50%; /* makes the photo circular; use 0% if you want square */
+  object-fit: cover;  /* ensures the image covers the container without stretching */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Kiss Day ---------- */
+
+.kiss-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  position: relative;
+}
+
+/* ---------- Characters ---------- */
+.ball {
+  width: 100px;
+  height: 100px;
+  border: 6px solid #333;
+  border-radius: 50%;
+  background: #ffdbac;
+  position: relative;
+}
+
+/* ---------- Dialogue ---------- */
+.dialogue {
+  position: absolute;
+  top: -20px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 6px 10px;
+  font-weight: bold;
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+#guy-bubble {
+  right: 55%;
+  border: 2px solid #90caf9;
+}
+
+#girl-bubble {
+  left: 55%;
+  border: 2px solid #f48fb1;
+}
+
+
+.dialogue > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.word {
+  display: inline-block;
+  padding: 0 6px;
+  transition: transform 0.25s ease;
+}
+
+.word.change {
+  transform: scale(1.3);
+}
+
+
+/* ---------- Kiss mark ---------- */
+.kiss-m {
+  position: absolute;
+  left: -10px;
+  top: 40px;
+  opacity: 0;
+}
+
+.kiss {
+  width: 14px;
+  height: 10px;
+  background: #ff6f91;
+  border-radius: 50%;
+  border-left: 5px solid #d6336c;
+  margin-bottom: 2px;
+}
+
+
+/* ---------- Kiss mark ---------- */
+.kiss-g {
+  position: absolute;
+  right: -10px;
+  top: 40px;
+  opacity: 0;
+}
+
+
+
+/* ---------- Button ---------- */
+.btn-wrap {
+  text-align: center;
+  margin-top: 25px;
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: none;
+  background: #f48fb1;
+  cursor: pointer;
+}
+
+/* ---------- Animations (OFF by default) ---------- */
+#l-ball,
+#r-ball,
+.kiss-m {
+  animation: none;
+}
+.kiss-g {
+  animation: none;
+}
+
+
+/* ---------- ACTIVE KISS ---------- */
+.kiss-active #l-ball {
+  animation: move-left 1s ease forwards;
+}
+
+.kiss-active #r-ball {
+  animation: move-right 1s ease forwards;
+}
+
+.kiss-active .kiss-m {
+  animation: kiss-pop 1s ease forwards;
+}
+
+.kiss-active .kiss-g {
+  animation: kiss-pop 1s ease forwards;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes move-left {
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes move-right {
+  50% { transform: translateX(-20px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes kiss-pop {
+  40% { opacity: 0; }
+  55% { opacity: 1; }
+  80% { opacity: 0; }
+}
+
+/* ---- EYES CONTAINER ---- */
+.eyesee {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 20px;
+  z-index: 20;
+}
+
+/* ---- SINGLE EYE ---- */
+.eyeser {
+  position: absolute;
+  width: 15px;
+  height: 14px;
+  border-radius: 50%;
+
+  /* DEFAULT: upside-down eyes */
+  border-top: 4px solid #000;
+  border-bottom: 0;
+}
+
+/* left / right */
+.eyeser:first-child {
+  left: 0;
+}
+
+.eyeser:last-child {
+  right: 0;
+}
+
+/* ---- DURING KISS ---- */
+.kissing .eyeser {
+  border-top: 0;
+  border-bottom: 4px solid #000;
+}
+
+.final-line {
+  opacity: 0;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #e91e63;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(10px);
+}
+
+.final-line.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Section ---------- */
+.valentine-day {
+  min-height: 100vh;
+  background: linear-gradient(#fff1f6, #ffe0ec);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.hint {
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+/* ---------- Scene ---------- */
+.envelope-scene {
+  position: relative;
+  width: 520px;
+  height: 300px; /* your increased height */
+}
+
+/* ---------- Envelope ---------- */
+.envelope {
+  position: absolute;
+  left: 50%;
+  inset: 0;
+  cursor: pointer;
+}
+
+/* Body */
+.body {
+  position: absolute;
+  left: 50%;
+  inset: 0;
+  background: #f6b7cd;
+  border-radius: 6px;
+  z-index: 2;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* Flap */
+.flap {
+  position: absolute;
+  inset: 0;
+  background: #f29abf;
+  clip-path: polygon(0 0, 50% 60%, 100% 0);
+  transform-origin: top;
+  transition: transform 0.7s ease;
+  z-index: 3;
+}
+
+/* ---------- Letter ---------- */
+.letter {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  width: 400px;
+  height: 270px;
+  background: #fffdf8;
+  transform: translate(-50%, 140px);
+  transition: transform 0.8s ease;
+  z-index: 1;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.letter-content {
+  padding: 24px;
+  height: 100%;
+  overflow-y: auto;
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+}
+
+.sign {
+  text-align: right;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+/* ---------- Heart Seal ---------- */
+.seal {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background: crimson;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.seal::before,
+.seal::after {
+  content: "";
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background: crimson;
+  border-radius: 50%;
+}
+
+.seal::before {
+  top: -22px;
+  left: 0;
+}
+
+.seal::after {
+  left: -22px;
+  top: 0;
+}
+
+/* ---------- STATES ---------- */
+
+/* Heart removed */
+.seal.broken {
+  transform: translateX(-80px) rotate(-60deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Envelope opened */
+.envelope.open .flap {
+  transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+  transform: translate(-50%, -200px);
+}
+
+.z-front {
+  z-index: 10 !important;
+}
+
+.z-mid {
+  z-index: 5 !important;
+}
+
+.z-back {
+  z-index: 1 !important;
+}
